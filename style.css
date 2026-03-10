@@ -1,0 +1,900 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Michroma', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg {
+    background: linear-gradient(to bottom, #508fed, #73a3f1);
+}
+
+.logo {
+    position: relative;
+    font-size: 20;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #508fed;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.nama {
+    color: azure;
+}
+
+.web {
+    color: rgb(2, 52, 161);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: #508fed;
+}
+
+/* Hamburger Menu Icon (Hidden on Desktop) */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+/* Menu */
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0260f7;
+}
+
+.card1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 299px;
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+    text-shadow: 5px 5px 5px rgba(13, 13, 13, 0.4);
+}
+
+.loader {
+    color: #f0f0f0;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    box-sizing: content-box;
+    height: 40px;
+    padding: 10px 10px;
+    display: flex;
+    border-radius: 8px;
+}
+
+.words {
+    overflow: hidden;
+    position: relative;
+}
+
+.words::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(var(--bg-color) 10%, transparent 30%, transparent 70%, var(--bg-color) 90%);
+    z-index: 20;
+}
+
+.word {
+    font-family: 'Michroma', sans-serif;
+    font-size: 30px;
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    color: #ffffff;
+    animation: spin_4991 4s infinite;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes spin_4991 {
+    10% {
+        transform: translateY(-102%);
+    }
+
+    25% {
+        transform: translateY(-100%);
+    }
+
+    35% {
+        transform: translateY(-202%);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+
+    60% {
+        transform: translateY(-302%);
+    }
+
+    75% {
+        transform: translateY(-300%);
+    }
+
+    85% {
+        transform: translateY(-402%);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-0px);
+    }
+}
+
+.hero-text {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+/* Hero Section */
+.sp1 {
+    font-family: 'poppins', sans-serif;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding-top: 400px;
+    padding-bottom: 300px;
+    padding-left: 100px;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.hero-text h1 span {
+    color: #0f4fa8;
+    font-weight: bold;
+}
+
+.hero-text h3 {
+    margin-bottom: 25px;
+    font-weight: normal;
+    color: #0f4fa8;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+}
+
+.hero-text p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #e6f0ff;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5;
+    color: #03a9fc;
+}
+
+.btn::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #A9C8F5 0%, #A9C8F5 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+button:hover::before {
+    width: 9em;
+}
+
+/* Box kanan */
+.hero-box {
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    position: relative;
+    margin-left: 600px;
+}
+
+.hero-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.heroab {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: #6A9FED;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    border-radius: 30px;
+    margin: 50px;
+}
+
+.hero-textab {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.hero-textab {
+    max-width: 800px;
+    padding-left: 100px;
+}
+
+.hero-textab p {
+    padding-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #e6f0ff;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero-textab h4 {
+    padding-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 29px;
+    color: #006EE3;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero-textab h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    max-width: 700px;
+    color: #ffffff;
+}
+
+.skill2 {
+    margin-top: 50px;
+    display: flex;
+    gap: 90px;
+    justify-self: center;
+}
+
+.b1,
+.b2,
+.b3 {
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+.btn2 {
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 6em;
+    transition: all 0.2s;
+    border: none;
+    font-weight: 500;
+    color: #006EE3;
+    background-color: white;
+}
+
+.btn2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn2:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn2::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.btn2::after {
+    background-color: #fff;
+}
+
+.btn2:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.cls-1 {
+    fill: #5B97F5;
+    animation: cls1 4s ease infinite both;
+}
+
+@keyframes cls1 {
+    0% {
+        fill: #A9C8F5;
+    }
+
+    34% {
+        fill: #5B97F5;
+    }
+
+    66% {
+        fill: #A9C8F5;
+    }
+
+    100% {
+        fill: #5B97F5;
+    }
+}
+
+.cls-1,
+.cls-2,
+.cls-3 {
+    stroke-width: 0px;
+}
+
+.cls-2 {
+    fill: #A9C8F5;
+    animation: cls2 4s ease infinite both;
+}
+
+@keyframes cls2 {
+    0% {
+        fill: #5B97F5;
+    }
+
+    34% {
+        fill: #A9C8F5;
+    }
+
+    66% {
+        fill: #5B97F5;
+    }
+
+    100% {
+        fill: #A9C8F5;
+    }
+}
+
+.cls-3 {
+    fill: #A9C8F5;
+    animation: cls3 4s ease infinite both;
+}
+
+@keyframes cls3 {
+    0% {
+        fill: #5B97F5;
+    }
+
+    34% {
+        fill: #A9C8F5;
+    }
+
+    66% {
+        fill: #5B97F5;
+    }
+
+    100% {
+        fill: #A9C8F5;
+    }
+}
+
+.cls-4 {
+    display: none;
+}
+
+#triangle {
+    height: 600px;
+    width: 500px;
+    padding-top: 0px;
+    animation: triangle 4s both infinite;
+}
+
+@keyframes triangle {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.texts {
+    justify-self: center;
+    color: #006EE3;
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.texts h1 {
+    justify-self: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.texts p {
+    font-family: "Poppins", sans-serif;
+    justify-self: center;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.skills {
+    margin-bottom: 50px;
+}
+
+.skl {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 1000px;
+    margin: 10px;
+    height: 150px;
+}
+
+.skl1 {
+    margin: 100px auto;
+    width: 90%;
+    overflow-x: auto;
+    display: flex;
+    gap: 1px;
+}
+
+.skl1::-webkit-scrollbar {
+    display: none;
+}
+
+.skl2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    animation: spin 10s infinite linear;
+    padding: 20px;
+}
+
+.img {
+    flex: 0 0 5em;
+    height: 100px;
+    font-size: 3rem;
+    text-align: center;
+    align-content: center;
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+
+    to {
+        translate: -100%;
+    }
+}
+
+.textsp {
+    justify-self: center;
+    color: #006EE3;
+    font-size: 20px;
+    padding-top: 200px;
+    padding-bottom: 30px;
+}
+
+.stack {
+    padding-bottom: 150px;
+    perspective: 1200px;
+    view-timeline-name: --card;
+    view-timeline-axis: block;
+}
+
+.card {
+    position: sticky;
+    top: calc(var(--i) * 40px);
+    width: min(950px, 80%);
+    height: 580px;
+    margin: 0 auto;
+    border-radius: 30px;
+    corner-shape: squircle;
+    overflow: hidden;
+    animation: stack 1s linear both;
+    animation-timeline: --card;
+    animation-range: entry 0% exit 50%;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    position: absolute;
+    inset: auto 0 0 0;
+    width: 100%;
+    padding: 30px;
+    background-color: #006EE3;
+}
+
+.txtpj {
+    font-family: 'poppins', sans-serif;
+    font-size: 2.2rem;
+    color: #e6f0ff;
+}
+
+.cnt {
+    background-color: #317ED7;
+    padding: 90px;
+}
+
+.cnt p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.lgo {
+    padding-top: 20px;
+    text-align: center;
+}
+
+i {
+    color: black;
+    font-size: 50px;
+    margin: 0 25px;
+}
+
+.copy {
+    text-align: center;
+    background: #015dc0;
+    padding: 20px;
+    color: #ffffff;
+}
+
+@keyframes stack {
+    0% {
+        transform: translateY(0) translateZ(0) rotateX(0) scale(1);
+    }
+
+    35% {
+        transform: translateY(100px) translateZ(-200px) rotateX(8deg) scale(.92);
+    }
+
+    75% {
+        transform: translateY(20px) translateZ(-120px) rotateX(2deg) scale(.95);
+    }
+
+    100% {
+        transform: translateY(0) translateZ(0) rotateX(0) scale(1);
+    }
+}
+
+#card1 {
+    --i: 1;
+}
+
+#card2 {
+    --i: 2;
+}
+
+#card3 {
+    --i: 3;
+}
+
+#menu-toggle{
+display:none;
+}
+
+.menu-icon{
+font-size:26px;
+}
+
+.menu-icon i{
+color:white;
+transition:0.3s;
+}
+
+.menu-icon i:hover{
+color:#0f4fa8;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+}
+
+/* tampilkan hamburger */
+.menu-icon{
+display:block;
+font-size:22px;
+color:white;
+cursor:pointer;
+}
+
+/* menu disembunyikan dulu */
+.nav-links{
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:#508fed;
+flex-direction:column;
+align-items:center;
+display:none;
+}
+
+/* jarak menu */
+.nav-links a{
+margin:15px 0;
+font-size:16px;
+}
+
+/* ketika hamburger diklik */
+#menu-toggle:checked ~ .nav-links{
+display:flex;
+}
+
+
+/* WELCOME text */
+.loader{
+    font-size:28px;
+    height:30px;
+    padding:5px 5px;
+}
+
+/* kata yang bergerak */
+.word{
+    font-size:18px;
+}
+
+/* container welcome */
+.card1{
+    margin-top:180px;
+    text-align:center;
+}
+
+
+.hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 60px;
+}
+
+/* Judul tetap pertama */
+.hero-text h1{
+    order:1;
+    font-size:32px;
+}
+
+/* Subjudul kedua */
+.hero-text h3{
+    order:2;
+    font-size:18px;
+}
+
+/* FOTO jadi urutan ketiga */
+.hero-box{
+    order:3;
+    margin:25px 0;
+    width:220px;
+    height:220px;
+}
+
+/* Deskripsi setelah foto */
+.hero-text p{
+text-align:center;
+font-size:14px;
+line-height:1.6;
+max-width:300px;
+margin:auto;
+}
+
+
+/* Button terakhir */
+.btn{
+    order:5;
+    margin-top:15px;
+}
+
+
+/* Hilangkan segitiga */
+#triangle{
+display:none;
+}
+
+/* Section about */
+.heroab{
+flex-direction:column;
+margin:20px;
+padding:30px 25px;
+border-radius:20px;
+}
+
+/* Text about */
+.hero-textab{
+padding-left:0;
+max-width:100%;
+}
+
+/* > About me */
+.hero-textab p{
+font-size:14px;
+margin-bottom:8px;
+}
+
+/* Who Am I */
+.hero-textab h4{
+font-size:22px;
+margin-bottom:10px;
+}
+
+/* Deskripsi */
+.hero-textab h3{
+font-size:15px;
+line-height:1.6;
+max-width:100%;
+}
+
+/* Judul What I Do */
+.texts h1{
+font-size:24px;
+text-align:center;
+}
+
+/* Deskripsi */
+.texts p{
+font-size:13px;
+padding:8px 15px;
+line-height:1.5;
+}
+
+.skills{
+display:none;
+}
+
+.textsp{
+text-align:center;
+padding-top:120px;
+padding-bottom:20px;
+}
+
+/* judul project */
+.textsp h1{
+font-size:24px;
+line-height:1.4;
+max-width:280px;
+margin:auto;
+}
+
+    /* Skill buttons */
+    .skill2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .btn2 {
+        width: 180px;
+    }
+
+    /* Skills slider */
+    .skl {
+        height: 120px;
+    }
+
+    .img {
+        height: 80px;
+    }
+
+    /* Project cards */
+    .card {
+        height: 350px;
+        width: 90%;
+    }
+
+    .txtpj {
+        font-size: 1.5rem;
+    }
+
+    /* Contact */
+    .cnt {
+        padding: 60px 20px;
+    }
+
+    i {
+        font-size: 35px;
+        margin: 0 15px;
+    }
+}
