@@ -566,7 +566,7 @@ button:hover::before {
 }
 
 .stack {
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     perspective: 1200px;
     view-timeline-name: --card;
     view-timeline-axis: block;
@@ -652,6 +652,68 @@ i {
         transform: translateY(0) translateZ(0) rotateX(0) scale(1);
     }
 }
+
+.btbt {
+    margin-left: 620px;
+    margin-bottom: 20px;
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(to bottom, #0099ff 0%,#66a6ff 100%);
+  color: white;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.btbt:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btbt:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btbt span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+.btbt svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+.btbt .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+.btbt:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btbt:hover svg {
+  transform: rotate(45deg);
+}
+
+
 
 #card1 {
     --i: 1;
