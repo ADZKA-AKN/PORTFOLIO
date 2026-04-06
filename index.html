@@ -1,42 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio pribadi Muhammad Adzkarulah - Full Stack Web Developer">
+    <meta name="keywords" content="portfolio, web developer, UI/UX design, HTML, CSS, JavaScript">
+    
+    <!-- External Resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
     <link rel="shortcut icon" href="/images/logo.ico" type="image/x-icon">
+    
+    <title>Portfolio</title>
 </head>
 
 <body class="bg">
 
+    <!-- ============== NAVBAR ============== -->
     <nav class="navbar">
+        <div class="logo">
+            <span class="nama">ADZKA</span><span class="web">WEB</span>
+        </div>
 
-    <div class="logo">
-        <span class="nama">ADZKA</span><span class="web">WEB</span>
-    </div>
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle menu">
+        
+        <label for="menu-toggle" class="menu-icon" aria-label="Menu icon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
 
-    <!-- checkbox -->
-    <input type="checkbox" id="menu-toggle">
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-    <!-- hamburger -->
-    <label for="menu-toggle" class="menu-icon">
-        <i class="fa-solid fa-bars"></i>
-    </label>
-
-    <!-- menu -->
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#project">Project</a>
-        <a href="#contact">Contact</a>
-    </div>
-
-</nav>
-
+    <!-- ============== WELCOME SECTION ============== -->
     <div class="card1">
         <div class="loader">
             <p>WELCOME</p>
@@ -49,79 +55,71 @@
         </div>
     </div>
 
-    <section class="hero">
+    <!-- ============== HERO SECTION ============== -->
+    <section class="hero" id="home">
         <div class="hero-text">
             <h1>Hi I am <span class="sp1">ADZKA</span></h1>
-            <h3>a Full Stack Web Developer</h3>
+            <h3>Full Stack Web Developer</h3>
             <p>
-                Hi my name muhammad adzkarul I am studying about  IT and full stack developer at school KODEN and
-                now I'm in 10th grade of high school.
+                Hi, my name is Muhammad Adzkarulah. I'm currently studying IT and full stack development at KODEIN school and in 10th grade of high school. I'm passionate about creating modern web experiences and learning new technologies.
             </p>
             <a href="#contact">
-            <button class="btn">Contact me</button>
+                <button class="btn">Contact me</button>
             </a>
         </div>
 
         <div class="hero-box">
-            <img src="/images/ak.jpeg" alt="adzka">
+            <img src="/images/ak.jpeg" alt="Muhammad Adzkarulah portrait">
         </div>
-
     </section>
 
+    <!-- ============== ABOUT SECTION ============== -->
     <section class="heroab" id="about">
-
         <div class="bt">
             <div id="triangle">
                 <svg id="Layer_1" data-name="Layer 1" version="1.1" viewBox="0 0 2000 2000">
-                    <polygon class="cls-1"
-                        points="928 781 1021 951 784.5 1371.97 1618 1371.97 1530.32 1544 509 1539 928 781"></polygon>
-                    <polygon class="cls-3"
-                        points="1618 1371.97 784.5 1371.97 874.93 1211 1346 1211 923.1 456 1110.06 456 1618 1371.97">
-                    </polygon>
+                    <polygon class="cls-1" points="928 781 1021 951 784.5 1371.97 1618 1371.97 1530.32 1544 509 1539 928 781"></polygon>
+                    <polygon class="cls-3" points="1618 1371.97 784.5 1371.97 874.93 1211 1346 1211 923.1 456 1110.06 456 1618 1371.97"></polygon>
                     <g id="Layer_2" data-name="Layer 2">
-                        <polygon class="cls-2"
-                            points="418 1372.74 509 1539 928 781 1162.32 1211 1346 1211 923.1 456 418 1372.74">
-                        </polygon>
+                        <polygon class="cls-2" points="418 1372.74 509 1539 928 781 1162.32 1211 1346 1211 923.1 456 418 1372.74"></polygon>
                     </g>
                 </svg>
             </div>
         </div>
 
-        <div class="hero-textab ">
-            <p>> ABOUT ME</p>
+        <div class="hero-textab">
+            <p class="about-label">> ABOUT ME</p>
             <h4>Who Am I</h4>
-            <h3>my name is Muhammad Adzkarulah. I'm currently studying IT and full-stack development at KODEIN school,
-                and I'm currently in my 10th year of high school. I'm still developing my understanding of IT materials
-                like HTML, JavaScript, and others. I also enjoy designing for my website or for personal enjoyment, and
-                I aspire to be a professional programmer.</h3>
+            <h3>
+                My name is Muhammad Adzkarulah. I'm currently studying IT and full-stack development at KODEIN school and in 10th year of high school. I'm actively developing my skills in HTML, CSS, JavaScript, and other modern web technologies. I also enjoy designing interfaces for websites and aspire to become a professional programmer.
+            </h3>
         </div>
-
-
     </section>
 
+    <!-- ============== SKILLS SECTION ============== -->
     <section class="skills">
-
         <div class="texts">
             <h1>What I Do</h1>
-            <p>Below are about my skills but I am also in the development and <br> honing stage</p>
+            <p>Below are my skills. I'm actively developing and honing them</p>
         </div>
+
         <div class="skill2">
-            <button class="btn2 b1">UI/UX design</button>
-            <button class="btn2 b2">web developer</button>
+            <button class="btn2 b1">UI/UX Design</button>
+            <button class="btn2 b2">Web Developer</button>
             <button class="btn2 b3">Photographer</button>
         </div>
 
         <div class="skl">
             <div class="skl1">
                 <div class="skl2">
-                    <div class="img"><img src="/images/figma.png" alt=""></div>
-                    <div class="img"><img src="/images/css.png" alt=""></div>
-                    <div class="img"><img src="/images/html.png" alt=""></div>
-                    <div class="img"><img src="/images/js.png" alt=""></div>
-                    <div class="img"><img src="/images/js2.png" alt=""></div>
-                    <div class="img"><img src="/images/sql.png" alt=""></div>
+                    <div class="img"><img src="/images/figma.png" alt="Figma"></div>
+                    <div class="img"><img src="/images/css.png" alt="CSS"></div>
+                    <div class="img"><img src="/images/html.png" alt="HTML"></div>
+                    <div class="img"><img src="/images/js.png" alt="JavaScript"></div>
+                    <div class="img"><img src="/images/js2.png" alt="Node.js"></div>
+                    <div class="img"><img src="/images/sql.png" alt="SQL"></div>
                 </div>
-                <div aria-hidden class="skl2">
+                <div class="skl2" aria-hidden="true">
                     <div class="img"><img src="/images/figma.png" alt=""></div>
                     <div class="img"><img src="/images/css.png" alt=""></div>
                     <div class="img"><img src="/images/html.png" alt=""></div>
@@ -130,80 +128,81 @@
                     <div class="img"><img src="/images/sql.png" alt=""></div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
+    <!-- ============== PROJECTS SECTION ============== -->
     <section id="project">
-        <div class="Project">
+        <div class="project-header">
             <div class="textsp">
-                <h1>what projects do i have</h1>
+                <h1>What Projects Do I Have</h1>
             </div>
 
             <section class="stack">
-
                 <article class="card" id="card1">
-                    <img src="/images/prjct1.png" alt="">
+                    <img src="/images/prjct1.png" alt="Clone Lasles VPN project">
                     <div class="info">
                         <h2 class="txtpj">Clone Lasles Vpn</h2>
-                        <p>create clone web</p>
+                        <p>Create clone web</p>
                     </div>
                 </article>
 
                 <article class="card" id="card2">
-                    <img src="/images/prjct5.png" alt="">
+                    <img src="/images/prjct5.png" alt="Web Store project">
                     <div class="info">
-                        <h2 class="txtpj">Web store</h2>
+                        <h2 class="txtpj">Web Store</h2>
                         <p>Design store web</p>
                     </div>
                 </article>
 
                 <article class="card" id="card3">
-                    <img src="/images/prjct3.png" alt="">
+                    <img src="/images/prjct3.png" alt="Film Web project">
                     <div class="info">
-                        <h2 class="txtpj">Film web</h2>
-                        <p>Design Film Web</p>
+                        <h2 class="txtpj">Film Web</h2>
+                        <p>Design film web</p>
                     </div>
                 </article>
             </section>
-<section>
-   <a href="https://canva.link/3ds0bhh9l0qhhux" target="_blank" rel="noopener noreferrer">
-    <button class="btbt">
-    
-  <div class="svg-wrapper-1">
-    <div class="svg-wrapper">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-        <path fill="none" d="M0 0h24v24H0z"></path>
-        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-      </svg>
-    </div>
-  </div>
-  
-  <span>See all project</span>
-</button>
-</a>    
-</section>
 
-            <div class="cnt">
-                <p>Contantc me</p>
-                <div class="lgo">
-                    <a href="https://wa.me/6285943652388" target="_blank">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                    <a href="https://github.com/ADZKA-AKN" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://www.instagram.com/a.dzk_4/" target="_blank" rel="noopener noreferrer">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>
+            <section class="see-all-section">
+                <a href="https://canva.link/3ds0bhh9l0qhhux" target="_blank" rel="noopener noreferrer">
+                    <button class="btbt">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>See all projects</span>
+                    </button>
+                </a>
+            </section>
+        </div>
+
+        <!-- ============== CONTACT SECTION ============== -->
+        <div class="cnt">
+            <p>Contact Me</p>
+            <div class="lgo">
+                <a href="https://wa.me/6285943652388" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="https://github.com/ADZKA-AKN" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/a.dzk_4/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
             </div>
+        </div>
 
-            <div class="copy" id="contact">
-                <p>Design by  ©adzka | 2026</p>
-            </div>
-
+        <!-- ============== FOOTER ============== -->
+        <div class="copy" id="contact">
+            <p>&copy; 2026 Design by Adzka </p>
+        </div>
     </section>
+
 </body>
 
 </html>
